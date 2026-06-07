@@ -60,7 +60,7 @@ Multi-User Isolation
 
 Each user receives an isolated vector store.
 
-data/
+```data/
 └── vector_store/
     ├── user_a/
     │   ├── index.faiss
@@ -68,7 +68,7 @@ data/
     │
     └── user_b/
         ├── index.faiss
-        └── index_meta.json
+        └── index_meta.json```
 
 Benefits:
 
