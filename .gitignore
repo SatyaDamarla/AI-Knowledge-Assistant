@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+
+# Environment variables
+.env
+
+# Vector store
+backend/data/vector_store/
+
+# Uploaded docs
+backend/data/docs/
+backend/data/notes/
+
+# Registry data
+backend/data/registry/sources.json
+
+# Node
+frontend/node_modules/
+
+# Build
+frontend/dist/
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
