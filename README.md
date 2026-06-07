@@ -60,7 +60,8 @@ Multi-User Isolation
 
 Each user receives an isolated vector store.
 
-```data/
+```text
+data/
 └── vector_store/
     ├── user_a/
     │   ├── index.faiss
@@ -68,7 +69,8 @@ Each user receives an isolated vector store.
     │
     └── user_b/
         ├── index.faiss
-        └── index_meta.json```
+        └── index_meta.json
+```
 
 Benefits:
 
@@ -77,6 +79,8 @@ No document leakage
 Cloud-ready architecture
 Scalable design
 Architecture
+                 
+```text
                     React Frontend
                            │
                            ▼
@@ -130,6 +134,7 @@ Architecture
                            ▼
 
                     Final Response
+```
 Tech Stack
 Frontend
 React
@@ -149,6 +154,8 @@ Data Storage
 JSON Registry
 Local File Storage
 Project Structure
+
+```text
 AI-Knowledge-Assistant/
 
 ├── backend/
@@ -190,15 +197,16 @@ AI-Knowledge-Assistant/
 │       └── vector_store/
 │
 └── frontend/
+```
 Installation
 Backend Setup
 cd backend
 
-python -m venv .venv
+text```python -m venv .venv```
 
 Windows:
 
-.venv\Scripts\activate
+text ``` .venv\Scripts\activate ```
 
 Install dependencies:
 
