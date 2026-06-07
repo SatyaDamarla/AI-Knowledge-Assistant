@@ -198,74 +198,143 @@ AI-Knowledge-Assistant/
 │
 └── frontend/
 ```
-Installation
-Backend Setup
+# Installation
+
+## Backend Setup
+
+```bash
 cd backend
 
-text```python -m venv .venv```
+python -m venv .venv
+```
 
-Windows:
+### Windows
 
-text ``` .venv\Scripts\activate ```
+```powershell
+.venv\Scripts\activate
+```
 
-Install dependencies:
+### Install Dependencies
 
+```bash
 pip install -r requirements.txt
-Environment Variables
+```
+
+---
+
+## Environment Variables
 
 Create:
 
+```text
 backend/.env
+```
 
 Add:
 
+```env
 GOOGLE_API_KEY=YOUR_GEMINI_API_KEY
-Run Backend
+```
+
+---
+
+## Run Backend
+
+```bash
 uvicorn app:app --reload
+```
 
 Backend URL:
 
+```text
 http://127.0.0.1:8000
-Frontend Setup
+```
+
+---
+
+## Frontend Setup
+
+```bash
 cd frontend
 
 npm install
+```
 
-Run:
+### Run Frontend
 
+```bash
 npm run dev
+```
 
 Frontend URL:
 
+```text
 http://localhost:5173
-API Endpoints
-Upload PDF
+```
+
+---
+
+# API Endpoints
+
+## Upload PDF
+
+```http
 POST /api/sources/upload
-Add Text Source
+```
+
+---
+
+## Add Text Source
+
+```http
 POST /api/sources/text
+```
 
 Example:
 
+```json
 {
   "title": "AWS Notes",
   "text": "AWS provides EC2, S3, Lambda, SageMaker and Bedrock."
 }
-Add YouTube Video
+```
+
+---
+
+## Add YouTube Video
+
+```http
 POST /api/sources/youtube
+```
 
 Example:
 
+```json
 {
   "title": "AI Video",
   "url": "https://www.youtube.com/watch?v=VIDEO_ID"
 }
-List Sources
+```
+
+---
+
+## List Sources
+
+```http
 GET /api/sources
-Query Knowledge Base
+```
+
+---
+
+## Query Knowledge Base
+
+```http
 POST /api/chat/query
+```
 
 Example:
 
+```json
 {
   "question": "What AWS services are mentioned?",
   "source_ids": [
@@ -273,65 +342,104 @@ Example:
   ],
   "top_k": 5
 }
-Example Workflow
-Upload PDF
+```
+
+---
+
+# Example Workflow
+
+## Upload PDF
+
+```text
 Resume.pdf
+```
 
 Ask:
 
+```text
 What cloud platforms has the candidate worked with?
-Add Text Notes
+```
+
+---
+
+## Add Text Notes
+
+```text
 AWS provides EC2, S3, Lambda and Bedrock.
+```
 
 Ask:
 
+```text
 What AWS services are mentioned?
-Add YouTube Video
+```
+
+---
+
+## Add YouTube Video
+
+```text
 https://www.youtube.com/watch?v=bhzZXQhxWV8
+```
 
 Ask:
 
+```text
 What is this video about?
-Current Status
-PDF Ingestion            ✅
-Text Ingestion           ✅
-YouTube Ingestion        ✅
-Gemini Embeddings        ✅
-FAISS Vector Search      ✅
-BM25 Retrieval           ✅
-Hybrid Search            ✅
-Multi-User Isolation     ✅
-React UI                 ✅
-Source Citations         ✅
+```
 
-Authentication           🔄 Planned
-Streaming Responses      🔄 Planned
-Chat History             🔄 Planned
-Cloud Deployment         🔄 Planned
-Reranking Models         🔄 Planned
-Future Enhancements
-JWT Authentication
-PostgreSQL Metadata Store
-Streaming Responses
-Pinecone / Qdrant Integration
-OCR for Scanned PDFs
-Chat History
-Source Highlighting
-Document Summarization
-Multi-Agent Retrieval
-Evaluation Framework
-Cloud Deployment (AWS/Azure/GCP)
-Author
+---
 
-Satya Damarla
+# Current Status
 
-AI/ML Engineer
+| Feature | Status |
+|----------|--------|
+| PDF Ingestion | ✅ |
+| Text Ingestion | ✅ |
+| YouTube Ingestion | ✅ |
+| Gemini Embeddings | ✅ |
+| FAISS Vector Search | ✅ |
+| BM25 Retrieval | ✅ |
+| Hybrid Search | ✅ |
+| Multi-User Isolation | ✅ |
+| React UI | ✅ |
+| Source Citations | ✅ |
+| Authentication | 🔄 Planned |
+| Streaming Responses | 🔄 Planned |
+| Chat History | 🔄 Planned |
+| Cloud Deployment | 🔄 Planned |
+| Reranking Models | 🔄 Planned |
 
-Specialties:
+---
 
-Retrieval-Augmented Generation (RAG)
-LLM Applications
-MLOps
-AI Platforms
-Vector Search
-Production AI Systems
+# Future Enhancements
+
+- JWT Authentication
+- PostgreSQL Metadata Store
+- Streaming Responses
+- Pinecone Integration
+- Qdrant Integration
+- OCR for Scanned PDFs
+- Chat History
+- Source Highlighting
+- Document Summarization
+- Multi-Agent Retrieval
+- Evaluation Framework
+- Cloud Deployment (AWS, Azure, GCP)
+
+---
+
+# Author
+
+## Satya Damarla
+
+**AI/ML Engineer**
+
+### Specialties
+
+- Retrieval-Augmented Generation (RAG)
+- LLM Applications
+- MLOps
+- AI Platforms
+- Vector Search
+- Production AI Systems
